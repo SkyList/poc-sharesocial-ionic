@@ -11,60 +11,94 @@
 		<div class="ion-padding">
 			<form (ngSubmit)="handleSubmit()">
 				<ion-item>
-					<ion-label position="floating">Nome do arrendatário</ion-label>
-					<ion-input type="text" [(ngModel)]="data.nameTenant" name="nameTenant"></ion-input>
+					<ion-label position="floating"
+						>Nome do arrendatário</ion-label
+					>
+					<ion-input
+						type="text"
+						[(ngModel)]="data.nameTenant"
+						name="nameTenant"
+					></ion-input>
 				</ion-item>
 
 				<ion-item>
 					<ion-label>Área</ion-label>
-					<ion-input type="number" [(ngModel)]="data.area" name="area" align="right"></ion-input>
+					<ion-input
+						type="number"
+						[(ngModel)]="data.area"
+						name="area"
+						align="right"
+					></ion-input>
 				</ion-item>
 
 				<ion-item>
 					<ion-label>Tipo de area</ion-label>
-					<ion-select okText="selecionar" cancelText="cancelar" [(ngModel)]="data.type" name="type">
-						<ion-select-option value="Hectares" selected>Hectare</ion-select-option>
-						<ion-select-option value="Alqueires">Alqueire</ion-select-option>
-						<ion-select-option value="Tarefas">Tarefa</ion-select-option>
+					<ion-select
+						okText="selecionar"
+						cancelText="cancelar"
+						[(ngModel)]="data.type"
+						name="type"
+					>
+						<ion-select-option value="Hectares" selected
+							>Hectare</ion-select-option
+						>
+						<ion-select-option value="Alqueires"
+							>Alqueire</ion-select-option
+						>
+						<ion-select-option value="Tarefas"
+							>Tarefa</ion-select-option
+						>
 					</ion-select>
 				</ion-item>
 
 				<ion-item>
 					<ion-label>Valor</ion-label>
 					<ion-input
-							type="number"
-							name="valueTenant"
-							[(ngModel)]="data.valueTenant"
-							align="right"></ion-input>
+						type="number"
+						name="valueTenant"
+						[(ngModel)]="data.valueTenant"
+						align="right"
+					></ion-input>
 				</ion-item>
 
 				<ion-item>
 					<ion-label>Data do arrendamento</ion-label>
 					<ion-datetime
-							displayFormat="MMM DD, YYYY"
-							monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez">
-						[(ngModel)]="data.dateTenant"
-						name="dateTenant">
+						displayFormat="MMM DD, YYYY"
+						monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez"
+					>
+						[(ngModel)]="data.dateTenant" name="dateTenant">
 					</ion-datetime>
 				</ion-item>
 
 				<ion-item>
 					<ion-label position="fixed">Local</ion-label>
 					<ion-input
-							type="number"
-							[(ngModel)]="data.localTenant"
-							name="localTenant" align="right"></ion-input>
+						type="number"
+						[(ngModel)]="data.localTenant"
+						name="localTenant"
+						align="right"
+					></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label position="stacked">Observação</ion-label>
+					<ion-textarea
+						[(ngModel)]="data.observation"
+						name="observation"
+					></ion-textarea>
 				</ion-item>
 
 				<ion-card-header>
 					<ion-card-subtitle>
-						Arendamento feito em: {{getArrendamentoDate()}}
+						Arendamento feito em: {{ getArrendamentoDate() }}
 					</ion-card-subtitle>
 				</ion-card-header>
 
-				<ion-button expand="block" fill="outline" type="submit">Compartilhar</ion-button>
+				<ion-button expand="block" fill="outline" type="submit"
+					>Compartilhar</ion-button
+				>
 			</form>
 		</div>
-
 	</ion-card>
 </ion-content>
