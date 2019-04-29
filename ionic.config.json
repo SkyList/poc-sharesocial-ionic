@@ -1,8 +1,8 @@
 {
-  "name": "teste",
-  "integrations": {
-    "cordova": {},
-    "capacitor": {}
-  },
-  "type": "angular"
+	"name": "ArrendaApp",
+	"integrations": {
+		"cordova": {},
+		"capacitor": {}
+	},
+	"type": "angular"
 }
